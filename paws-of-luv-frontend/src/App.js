@@ -5,6 +5,7 @@ import {
   Route,
   Switch
 } from 'react-router-dom'
+import mockCats from './mockCats.js'
 
 import Header from './components/Header'
 import Footer from './components/Footer'
@@ -18,17 +19,30 @@ import NotFound from './pages/NotFound'
 
 
 class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      cats: mockCats
+    }
+  }
   render() {
     return (
       <>
-        <Header />
-        <Home />
-        <CatIndex />
-        <CatShow />
-        <CatNew />
-        <CatEdit />
-        <NotFound />
-        <Footer />
+        <Router>
+          <Header />
+
+          <Switch>
+            <Route exact path="/" component={ Home } />
+            <Route path="/catindex" component={ CatIndex } />
+            <Route path="/catshow/:id" component={ CatShow } />
+            <Route path="/catnew" component={ CatNew } />
+            <Route path="/catedit/:id" component={ CatEdit } />
+            <Route component={ NotFound }/>
+          </Switch>
+        
+          <Footer />
+        </Router>
+        
       </>
     )
   }
