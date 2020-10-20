@@ -45,11 +45,17 @@ class App extends Component {
               />
               <Route
                 path="/catindex"
-                component={CatIndex}
+                render={ (props) => <CatIndex cats={ this.state.cats } /> }
               />
               <Route
                 path="/catshow/:id"
-                component={CatShow}
+                render={ (props) => {
+                  let id = props.match.params.id
+                  let cat = this.state.cats.find(cat => cat.id === parseInt(id))
+                  return (
+                    <CatShow cat={ cat } />
+                  )
+                }}
               />
               <Route
                 path="/catnew"
