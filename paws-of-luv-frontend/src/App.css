@@ -1,0 +1,16 @@
+.header {
+  background-color: #edd8ec;
+  height: 50px;
+  width: 100%;
+}
+.opps {
+  background-image: url(./assets/test2.png) !important;
+}
+
+.footer {
+  background-color: #edd8ec;
+  position: fixed;
+  bottom: 0;
+  height: 50px;
+  width: 100%;
+}

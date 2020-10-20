@@ -25,24 +25,31 @@ class App extends Component {
       cats: mockCats
     }
   }
+
+  componentDidMount() {
+    document.body.style.backgroundColor = "#ede4d9"
+    document.body.style.fontFamily = "Architects Daughter, cursive"
+  }
+
   render() {
     return (
       <>
-        <Router>
-          <Header />
+        <div className="app">
+          <Router>
+            <Header />
 
-          <Switch>
-            <Route exact path="/" component={ Home } />
-            <Route path="/catindex" component={ CatIndex } />
-            <Route path="/catshow/:id" component={ CatShow } />
-            <Route path="/catnew" component={ CatNew } />
-            <Route path="/catedit/:id" component={ CatEdit } />
-            <Route component={ NotFound }/>
-          </Switch>
-        
-          <Footer />
-        </Router>
-        
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route path="/catindex" component={CatIndex} />
+              <Route path="/catshow/:id" component={CatShow} />
+              <Route path="/catnew" component={CatNew} />
+              <Route path="/catedit/:id" component={CatEdit} />
+              <Route component={NotFound} />
+            </Switch>
+
+            <Footer />
+          </Router>
+        </div>
       </>
     )
   }
