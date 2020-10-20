@@ -1,11 +1,29 @@
+/* ########## H E A D E R ########## */
+
 .header {
   background-color: #edd8ec;
   height: 50px;
   width: 100%;
 }
-.opps {
-  background-image: url(./assets/test2.png) !important;
+
+/* ########## H O M E ########## */
+
+/* ########## C A T - I N D E X ########## */
+
+/* ########## C A T - S H O W ########## */
+
+/* ########## C A T - N E W ########## */
+
+/* ########## C A T - E D I T ########## */
+
+/* ########## N O T - F O U N D ########## */
+
+.pageNotFound {
+  display: flex;
+  justify-content: center !important;
 }
+
+/* ########## F O O T E R ########## */
 
 .footer {
   background-color: #edd8ec;

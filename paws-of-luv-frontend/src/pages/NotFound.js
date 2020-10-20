@@ -1,12 +1,18 @@
 import React, { Component } from 'react';
-import test2 from '../assets/test2.png';
+import fourOhFour from '../assets/fourOhFour.jpeg';
 
 class NotFound extends Component {
     render() {
         return (
             <>
-                <h1>Oopsies.</h1>
-                <img src="../assets/test2.png" alt="404 Page Not Found" className="cat" />
+                <div className="pageNotFound">
+                    <div>
+                        <h1>Oopsies.</h1>
+                    </div>
+                    <div>
+                        <img src={fourOhFour} alt="404 Page Not Found" className="cat" />
+                    </div>
+                </div>
             </>
         )
     }
