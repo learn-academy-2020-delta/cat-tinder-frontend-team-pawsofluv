@@ -1,38 +1,34 @@
-.App {
-  text-align: center;
+/* ########## H E A D E R ########## */
+
+.header {
+  background-color: #edd8ec;
+  height: 50px;
+  width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* ########## H O M E ########## */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/* ########## C A T - I N D E X ########## */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* ########## C A T - S H O W ########## */
+
+/* ########## C A T - N E W ########## */
+
+/* ########## C A T - E D I T ########## */
+
+/* ########## N O T - F O U N D ########## */
+
+.pageNotFound {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: center !important;
 }
 
-.App-link {
-  color: #61dafb;
-}
+/* ########## F O O T E R ########## */
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.footer {
+  background-color: #edd8ec;
+  position: fixed;
+  bottom: 0;
+  height: 50px;
+  width: 100%;
 }
