@@ -5,6 +5,7 @@ import {
     CardText,
     Col
 } from 'reactstrap'
+import { NavLink } from 'react-router-dom'
 
 class CatShow extends Component {
     render() {
@@ -19,6 +20,9 @@ class CatShow extends Component {
                     <CardText>
                         Hello, I am { this.props.cat.age } years old. I love { this.props.cat.enjoys }.
                     </CardText>
+                    <NavLink to={ '/catindex' }>
+                        Back to List
+                    </NavLink>
                 </Card>
             </Col>
         </>

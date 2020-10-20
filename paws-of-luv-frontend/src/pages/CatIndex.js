@@ -4,6 +4,7 @@ import {
     CardTitle,
     Col
 } from 'reactstrap'
+import { NavLink } from 'react-router-dom'
 
 class CatIndex extends Component {
     render() {
@@ -16,7 +17,9 @@ class CatIndex extends Component {
                     return (
                         <Card key={ index }>
                             <CardTitle>
-                                <h3> { cat.name } </h3>
+                                <NavLink to={ `/catshow/${ cat.id }` } >
+                                    { cat.name }
+                                </NavLink>
                             </CardTitle>
                         </Card>
                     )
