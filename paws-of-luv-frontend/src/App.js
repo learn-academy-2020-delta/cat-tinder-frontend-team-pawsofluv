@@ -26,11 +26,6 @@ class App extends Component {
     }
   }
 
-  componentDidMount() {
-    document.body.style.backgroundColor = "#ede4d9"
-    document.body.style.fontFamily = "Architects Daughter, cursive"
-  }
-
   render() {
     return (
       <>
@@ -45,15 +40,15 @@ class App extends Component {
               />
               <Route
                 path="/catindex"
-                render={ (props) => <CatIndex cats={ this.state.cats } /> }
+                render={(props) => <CatIndex cats={this.state.cats} />}
               />
               <Route
                 path="/catshow/:id"
-                render={ (props) => {
+                render={(props) => {
                   let id = props.match.params.id
                   let cat = this.state.cats.find(cat => cat.id === parseInt(id))
                   return (
-                    <CatShow cat={ cat } />
+                    <CatShow cat={cat} />
                   )
                 }}
               />

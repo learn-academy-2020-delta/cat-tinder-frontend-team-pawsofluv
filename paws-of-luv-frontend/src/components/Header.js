@@ -7,15 +7,15 @@ class Header extends Component {
             <>
                 <div className="header">
                     {/* <p>Header</p> */}
-                    <Nav className="nav">
+                    <Nav>
                         <NavItem>
-                            <NavLink href="/">Home</NavLink>
+                            <NavLink className="nav" href="/">Home</NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink href="/CatIndex">Cat Index</NavLink>
+                            <NavLink className="nav" href="/CatIndex">Cat Index</NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink href="/CatNew">Create New Kitty</NavLink>
+                            <NavLink className="nav" href="/CatNew">Create New Kitty</NavLink>
                         </NavItem>
                     </Nav>
                 </div>

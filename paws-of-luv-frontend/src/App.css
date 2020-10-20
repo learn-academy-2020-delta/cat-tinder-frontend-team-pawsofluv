@@ -1,12 +1,73 @@
+/* ########## B O D Y ########## */
+body {
+  background-color: #ede4d9 !important;
+  font-family: "Architects Daughter", cursive !important;
+}
+
 /* ########## H E A D E R ########## */
 
 .header {
+  display: flex;
+  position: fixed;
+  flex-direction: row;
+  justify-content: right;
+  text-align: right;
+
+  padding: 10px;
   background-color: #edd8ec;
   height: 50px;
   width: 100%;
 }
 
+.nav {
+  display: flex;
+  text-align: right;
+  justify-content: right;
+  padding: 0px 25px 0px 25px !important;
+}
+
 /* ########## H O M E ########## */
+
+h1 {
+  padding: 0px 15px 0px 15px;
+}
+
+.titleOne {
+  display: flex;
+  justify-content: center;
+}
+
+.logoOne {
+  display: flex !important;
+  justify-content: left !important;
+  height: 40px;
+  width: 40px;
+}
+
+.logoTwo {
+  display: flex !important;
+  justify-content: right !important;
+  height: 40px;
+  width: 40px;
+}
+
+.homeBackground {
+  display: flex;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  justify-content: center;
+  text-align: center;
+  padding: 100px;
+}
+
+.picOne {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  height: 425px;
+  width: 385px;
+}
 
 /* ########## C A T - I N D E X ########## */
 
