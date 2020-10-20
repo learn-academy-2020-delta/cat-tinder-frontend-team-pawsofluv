@@ -1,3 +1,9 @@
+/* ########## B O D Y ########## */
+body {
+  background-color: #ede4d9 !important;
+  font-family: "Architects Daughter", cursive !important;
+}
+
 /* ########## H E A D E R ########## */
 
 .header {
