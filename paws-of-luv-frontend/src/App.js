@@ -39,12 +39,29 @@ class App extends Component {
             <Header />
 
             <Switch>
-              <Route exact path="/" component={Home} />
-              <Route path="/catindex" component={CatIndex} />
-              <Route path="/catshow/:id" component={CatShow} />
-              <Route path="/catnew" component={CatNew} />
-              <Route path="/catedit/:id" component={CatEdit} />
-              <Route component={NotFound} />
+              <Route
+                exact path="/"
+                component={Home}
+              />
+              <Route
+                path="/catindex"
+                component={CatIndex}
+              />
+              <Route
+                path="/catshow/:id"
+                component={CatShow}
+              />
+              <Route
+                path="/catnew"
+                component={CatNew}
+              />
+              <Route
+                path="/catedit/:id"
+                component={CatEdit}
+              />
+              <Route
+                component={NotFound}
+              />
             </Switch>
 
             <Footer />
