@@ -16,7 +16,8 @@ class CatNew extends Component {
         name: "",
         age: "",
         enjoys: ""
-      }
+      },
+      success: false
     }
   }
 
@@ -28,6 +29,7 @@ class CatNew extends Component {
 
   handleSubmit = () => {
     this.props.createNewCat(this.state.form)
+    this.setState({ success: true })
   }
 
     render() {
@@ -67,6 +69,7 @@ class CatNew extends Component {
                 Create New Cat
               </Button>
             </Form>
+            { this.state.success && <Redirect to = '/catindex' /> }
         </>
         )
     }
