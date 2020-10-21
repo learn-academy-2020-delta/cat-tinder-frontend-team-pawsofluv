@@ -13,7 +13,7 @@ class CatIndex extends Component {
             <h3>Cat Index</h3>
             <br />
             <Col sm="6">
-                { this.props.cats.map ((cat, index) => {
+                { this.props.cats.map((cat, index) => {
                     return (
                         <Card key={ index }>
                             <CardTitle>

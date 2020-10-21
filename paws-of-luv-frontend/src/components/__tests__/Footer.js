@@ -2,10 +2,11 @@ import React from 'react'
 import Enzyme, { shallow } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 import Footer from '../Footer.js'
+// import { Nav, NavItem, NavLink } from 'reactstrap';
 
 Enzyme.configure({ adapter: new Adapter() })
 
-it('renders the header', () => {
-  const footer = shallow(<Footer />)
-  expect(footer.find('p').text()).toEqual('Footer')
+it('Checks for the Nav tag', () => {
+  const renderFooter= shallow(<Footer />)
+  expect(renderFooter.find('Nav').exists());
 })

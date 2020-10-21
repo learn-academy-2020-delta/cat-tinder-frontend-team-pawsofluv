@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {
+    Button,
     Card,
     CardTitle,
     CardText,
@@ -21,8 +22,11 @@ class CatShow extends Component {
                             Hello, I am {this.props.cat.age} years old. I love {this.props.cat.enjoys}.
                     </CardText>
                         <NavLink to={'/catindex'}>
-                            Back to List
-                    </NavLink>
+                          Back to List
+                        </NavLink>
+                        <NavLink to={`/catedit/${ this.props.cat.id }`}>
+                          <Button>Edit Cat Profile</Button>
+                        </NavLink>
                     </Card>
                 </Col>
             </>
