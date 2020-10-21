@@ -8,4 +8,5 @@ Enzyme.configure({ adapter: new Adapter() })
 it('renders the cat index', () => {
   const catIndex = shallow(<CatIndex />)
   expect(catIndex.find('h3').text()).toEqual('Cat Index')
+  // expect(wrapper.matchesElement(<h3>Cat Index</h3>)).to.equal(true);
 })

@@ -26,6 +26,10 @@ class App extends Component {
     }
   }
 
+  createNewCat = (newCat) => {
+    console.log(newCat)
+  }
+
   render() {
     return (
       <>
@@ -54,7 +58,7 @@ class App extends Component {
               />
               <Route
                 path="/catnew"
-                component={CatNew}
+                render = { (props) => <CatNew createNewCat = { this.createNewCat } /> }
               />
               <Route
                 path="/catedit/:id"
