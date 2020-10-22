@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+
+import LikeButton from '../components/LikeButton.js'
+
 import {
     Button,
     Card,
@@ -21,11 +24,12 @@ class CatShow extends Component {
                         <CardText>
                             Hello, I am {this.props.cat.age} years old. I love {this.props.cat.enjoys}.
                     </CardText>
+                        <LikeButton catId={this.props.cat.id} />
                         <NavLink to={'/catindex'}>
-                          Back to List
+                            Back to List
                         </NavLink>
-                        <NavLink to={`/catedit/${ this.props.cat.id }`}>
-                          <Button>Edit Cat Profile</Button>
+                        <NavLink to={`/catedit/${this.props.cat.id}`}>
+                            <Button>Edit Cat Profile</Button>
                         </NavLink>
                     </Card>
                 </Col>

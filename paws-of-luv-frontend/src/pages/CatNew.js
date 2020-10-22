@@ -3,13 +3,14 @@ import {
   Button,
   Form,
   FormGroup,
+  FormText,
   Input,
   Label
 } from 'reactstrap'
 import { Redirect } from 'react-router-dom'
 
 class CatNew extends Component {
-  constructor(props){
+  constructor(props) {
     super(props)
     this.state = {
       form: {
@@ -32,47 +33,54 @@ class CatNew extends Component {
     this.setState({ success: true })
   }
 
-    render() {
+  render() {
     return (
-        <>
-            <h3>Cat New</h3>
-            <Form>
-              <FormGroup>
-              <Label for="name">Cat's Name</Label>
-              <Input
-                type="text"
-                name="name"
-                onChange = { this.handleChange }
-                value = { this.state.form.name }
-              />
-              </FormGroup>
-              <FormGroup>
-              <Label for="age">Cat's Age</Label>
-              <Input
-                type="number"
-                name="age"
-                onChange = { this.handleChange }
-                value = { this.state.form.age }
-              />
-              </FormGroup>
-              <FormGroup>
-              <Label for="enjoys">What does your cat enjoy?</Label>
-              <Input
-                type="text"
-                name="enjoys"
-                onChange = { this.handleChange }
-                value = { this.state.form.enjoys }
-              />
-              </FormGroup>
+      <>
+        <h3>Cat New</h3>
+        <Form>
+          <FormGroup>
+            <Label for="photo">Upload Photo</Label>
+            <Input type="file" name="photo" />
+            <FormText color="muted">
+              Photo of me!
+            </FormText>
+          </FormGroup>
+          <FormGroup>
+            <Label for="name">Cat's Name</Label>
+            <Input
+              type="text"
+              name="name"
+              onChange={this.handleChange}
+              value={this.state.form.name}
+            />
+          </FormGroup>
+          <FormGroup>
+            <Label for="age">Cat's Age</Label>
+            <Input
+              type="number"
+              name="age"
+              onChange={this.handleChange}
+              value={this.state.form.age}
+            />
+          </FormGroup>
+          <FormGroup>
+            <Label for="enjoys">What does your cat enjoy?</Label>
+            <Input
+              type="text"
+              name="enjoys"
+              onChange={this.handleChange}
+              value={this.state.form.enjoys}
+            />
+          </FormGroup>
 
-              <Button name="submit" onClick={ this.handleSubmit }>
-                Create New Cat
+          <Button name="submit" onClick={this.handleSubmit}>
+            Create New Cat
               </Button>
-            </Form>
-            { this.state.success && <Redirect to = '/catindex' /> }
-        </>
-        )
-    }
+        </Form>
+        { this.state.success && <Redirect to='/catindex' />}
+      </>
+    )
+  }
 }
 
 export default CatNew

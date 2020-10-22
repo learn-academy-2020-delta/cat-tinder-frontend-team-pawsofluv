@@ -63,7 +63,7 @@ class App extends Component {
               />
               <Route
                 path="/catnew"
-                render = { (props) => <CatNew createNewCat = { this.createNewCat } /> }
+                render={(props) => <CatNew createNewCat={this.createNewCat} />}
               />
               <Route
                 path="/catedit/:id"
@@ -71,7 +71,7 @@ class App extends Component {
                   let id = props.match.params.id
                   let cat = this.state.cats.find(cat => cat.id === parseInt(id))
                   return (
-                    <CatEdit cat={cat} editCat = { this.editCat } />
+                    <CatEdit cat={cat} editCat={this.editCat} />
                   )
                 }}
               />
