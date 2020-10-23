@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
+
 import './App.css';
+
 import {
   BrowserRouter as Router,
   Route,
   Switch
 } from 'react-router-dom'
+
 import mockCats from './mockCats.js'
 
 import Header from './components/Header'
@@ -38,50 +41,52 @@ class App extends Component {
   render() {
     return (
       <>
-        <div className="app">
-          <Router>
-            <Header />
+        <div id="page-content">
+          <div id="content-wrap">
+            <Router>
+              <Header />
 
-            <Switch>
-              <Route
-                exact path="/"
-                component={Home}
-              />
-              <Route
-                path="/catindex"
-                render={(props) => <CatIndex cats={this.state.cats} />}
-              />
-              <Route
-                path="/catshow/:id"
-                render={(props) => {
-                  let id = props.match.params.id
-                  let cat = this.state.cats.find(cat => cat.id === parseInt(id))
-                  return (
-                    <CatShow cat={cat} />
-                  )
-                }}
-              />
-              <Route
-                path="/catnew"
-                render={(props) => <CatNew createNewCat={this.createNewCat} />}
-              />
-              <Route
-                path="/catedit/:id"
-                render={(props) => {
-                  let id = props.match.params.id
-                  let cat = this.state.cats.find(cat => cat.id === parseInt(id))
-                  return (
-                    <CatEdit cat={cat} editCat={this.editCat} />
-                  )
-                }}
-              />
-              <Route
-                component={NotFound}
-              />
-            </Switch>
+              <Switch>
+                <Route
+                  exact path="/"
+                  component={Home}
+                />
+                <Route
+                  path="/catindex"
+                  render={(props) => <CatIndex cats={this.state.cats} />}
+                />
+                <Route
+                  path="/catshow/:id"
+                  render={(props) => {
+                    let id = props.match.params.id
+                    let cat = this.state.cats.find(cat => cat.id === parseInt(id))
+                    return (
+                      <CatShow cat={cat} />
+                    )
+                  }}
+                />
+                <Route
+                  path="/catnew"
+                  render={(props) => <CatNew createNewCat={this.createNewCat} />}
+                />
+                <Route
+                  path="/catedit/:id"
+                  render={(props) => {
+                    let id = props.match.params.id
+                    let cat = this.state.cats.find(cat => cat.id === parseInt(id))
+                    return (
+                      <CatEdit cat={cat} editCat={this.editCat} />
+                    )
+                  }}
+                />
+                <Route
+                  component={NotFound}
+                />
+              </Switch>
 
-            <Footer />
-          </Router>
+              <Footer id="footer" />
+            </Router>
+          </div>
         </div>
       </>
     )

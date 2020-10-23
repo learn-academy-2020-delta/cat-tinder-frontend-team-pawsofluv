@@ -1,7 +1,11 @@
+/* ########## H T M L ########## */
+
 html {
   height: 100% !important;
   width: 100% !important;
 }
+
+/* ########## B O D Y ########## */
 
 body {
   background-color: #d8e2dc !important;
@@ -10,36 +14,17 @@ body {
   width: 100% !important;
 }
 
-#home-body {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  text-align: center;
-  height: 80vh;
+#page-container {
+  position: relative;
+  min-height: 100vh;
 }
 
-#not-found-body {
-  text-align: center;
-  margin-bottom: 40px;
+#content-wrap {
+  padding-bottom: 2.5rem;
 }
 
-.footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: #f4acb7;
-  color: black;
-  font-family: "Sansita Swashed", cursive;
-}
+/* ########## T I T L E S - O F - P A G E S ########## */
 
-.nav {
-  display: flex;
-  text-align: right;
-  justify-content: right;
-  padding: 0px 25px 0px 25px !important;
-}
-
-/* Page Titles */
 .title {
   font-size: 75px;
   margin: 10px;
@@ -49,7 +34,8 @@ body {
   font-family: "Sansita Swashed", cursive;
 }
 
-/* Buttons */
+/* ########## B U T T O N S ########## */
+
 .button {
   background-color: #f28482 !important;
   color: #f7ede2;
@@ -72,8 +58,9 @@ body {
   color: #f5cac3 !important;
 }
 
-/* Cat Images */
-.cat {
+/* ########## I M A G E S ########## */
+
+.picture {
   height: 600px;
   width: 600px;
   border: 10px #ffe5d9;
@@ -86,7 +73,8 @@ body {
   text-shadow: 2px 2px 2px #191919;
 }
 
-/* Header */
+/* ########## H E A D E R ########## */
+
 .jumbotron.jumbotron-fluid {
   background-color: #f4acb7;
   color: azure;
@@ -122,7 +110,8 @@ body {
   width: 225px;
 }
 
-/* Hamburger Menu */
+/* ########## N A V - B A R ########## */
+
 nav.navbar.navbar-light {
   text-align: right;
   font-size: 30px;
@@ -157,7 +146,8 @@ button.mr-2.navbar-toggler:hover {
   color: #f5cac3 !important;
 }
 
-/* Links */
+/* ########## L I N K S ########## */
+
 a:hover {
   color: #f5cac3 !important;
 }
@@ -166,7 +156,24 @@ a:visited {
   color: #f7ede2;
 }
 
-/* Index Page */
+/* ########## H O M E ########## */
+
+#home-body {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  text-align: center;
+  height: 80vh;
+}
+
+.nav {
+  display: flex;
+  text-align: right;
+  justify-content: right;
+  padding: 0px 25px 0px 25px !important;
+}
+
+/* ########## C A T - I N D E X ########## */
 
 a.btn.btn-secondary {
   background-image: url("./assets/sleepy.png");
@@ -193,28 +200,45 @@ a.btn.btn-secondary {
   justify-content: space-around;
 }
 
-/* Show Page */
+/* ########## S H O W - C A T ########## */
+
 #show-body {
-  background-color: black;
+  height: 100%;
+  width: 100%;
+  /* background-color: black; */
 }
 
 #cat-card {
   padding: 35px;
-  background-color: black;
+  /* background-color: black; */
   width: 70vw;
   height: 80vh;
   margin: 0 auto;
+  margin-bottom: 25px;
   font-size: 25px;
+}
+
+.allTheLikes {
+  background-color: #ffcad4;
+  border: transparent;
+}
+
+.close-image {
+  border: transparent;
+  width: 10vw;
+  height: 20vh;
 }
 
 div.card {
   text-align: center;
   align-items: center;
   background-color: #ffe5d9;
+  margin-bottom: 50px;
   font-family: "Grandstander", cursive;
 }
 
-/* New Page */
+/* ########## N E W - C A T ########## */
+
 #new-body {
   background-color: #ffe5d9;
   height: 100vh;
@@ -227,17 +251,32 @@ div.card {
   margin: 0 auto;
 }
 
-.fillMeOut {
-}
-
 #love {
   background-image: url("./assets/likeMe.png");
   background-size: cover;
 }
 
-/* Phone Breakpoint */
+/* ########## N O T - F O U N D ########## */
+
+#errorBody {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* ########## F O O T E R ########## */
+
+#footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+  background-color: #f4acb7;
+  font-family: "Sansita Swashed", cursive;
+}
+
+/* ########## P H O N E - B R E A K P O I N T ########## */
 @media (max-width: 480px) {
-  .cat {
+  .picture {
     margin: 10px;
     max-width: 90%;
     display: flex;

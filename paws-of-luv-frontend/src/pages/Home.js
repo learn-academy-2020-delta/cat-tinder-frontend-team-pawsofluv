@@ -12,27 +12,51 @@ class Home extends Component {
             <>
                 <div id="home-body">
                     <div>
-                        <img src={mittens} alt="smiley Kitty" className="cat" />
+                        <img
+                            src={mittens}
+                            alt="smiley Kitty"
+                            className="picture"
+                        />
                         <span className="namez">Mittens</span>
                     </div>
                     <div>
-                        <img src={raisins} alt="smiley Kitty" className="cat" />
+                        <img
+                            src={raisins}
+                            alt="Big Fuffy Yawn"
+                            className="picture"
+                        />
                         <span className="namez">Raisins</span>
                     </div>
                     <div>
-                        <img src={toast} alt="smiley Kitty" className="cat" />
+                        <img
+                            src={toast}
+                            alt="Cat with Butterfly Friend"
+                            className="picture"
+                        />
                         <span className="namez">Toast</span>
                     </div>
                     <div>
-                        <img src={itchy} alt="smiley Kitty" className="cat" />
+                        <img
+                            src={itchy}
+                            alt="Give Him all the Cheese"
+                            className="picture"
+                        />
                         <span className="namez">Itchy</span>
                     </div>
                     <div>
-                        <img src={scratchy} alt="smiley Kitty" className="cat" />
+                        <img
+                            src={scratchy}
+                            alt="Ready for his Date"
+                            className="picture"
+                        />
                         <span className="namez">Scratchy</span>
                     </div>
                     <div>
-                        <img src={bandit} alt="smiley Kitty" className="cat" />
+                        <img
+                            src={bandit}
+                            alt="Uhhhh...totally a cat, nothing to see here."
+                            className="picture"
+                        />
                         <span className="namez">Bandit</span>
                     </div>
                 </div>

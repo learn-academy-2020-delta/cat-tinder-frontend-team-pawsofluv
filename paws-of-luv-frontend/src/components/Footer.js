@@ -5,8 +5,7 @@ class Footer extends Component {
     render() {
         return (
             <>
-                <div className="footer">
-                    {/* <p>Footer</p> */}
+                <div id="footer">
                     <Nav style={{ display: "flex", justifyContent: "left" }} className="nav">
                         <NavItem>
                             <NavLink style={{ color: "black", textShadow: "1px 1px 1px black", fontSize: "18px" }} href="/">Home</NavLink>
