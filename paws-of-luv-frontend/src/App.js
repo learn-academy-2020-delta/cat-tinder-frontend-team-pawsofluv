@@ -51,8 +51,28 @@ class App extends Component {
   }
 
   editCat = (cat, id) => {
-    console.log("Edit cat:", cat)
-    console.log("ID:", id)
+    return fetch(`http://localhost:3000/cats/${id}`, {
+      // converting an object to a string
+      body: JSON.stringify(cat),
+      // specify the info being sent in JSON and the info returning should be JSON
+      headers: {
+        "Content-Type": "application/json"
+      },
+      // HTTP verb so the correct endpoint is invoked on the server
+      method: "PATCH"
+    })
+    .then(response => {
+      if(response.status === 422){
+        alert("Please check your submission.")
+      }
+      return response.json()
+    })
+    .then(payload => {
+      this.catIndex()
+    })
+    .catch(errors => {
+      console.log("update errors:", errors)
+    })
   }
 
   componentDidMount(){
