@@ -13,7 +13,7 @@ class CatIndex extends Component {
                     <h3 className="title">Here's All Our Furry Friends!</h3>
                     <br />
                     <div id="button-set">
-                        {this.props.cats.map((cat, index) => {
+                        {this.props.cats && this.props.cats.map((cat, index) => {
                             return (
                                 <Button key={index} href={`/catshow/${cat.id}`}>
                                     <br />
