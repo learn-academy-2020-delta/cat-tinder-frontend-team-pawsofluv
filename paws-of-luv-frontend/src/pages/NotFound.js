@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
-import fourOhFour from '../assets/fourOhFour.jpeg';
+import poop from '../assets/poop.png';
 
 class NotFound extends Component {
     render() {
         return (
             <>
-                <div className="pageNotFound">
+                <div id="not-found-body">
                     <div>
-                        <h1>Oopsies.</h1>
+                        <h1>You went the wrong way and disturbed Mr. Stinkums. <br /> You'd better turn back before he bites you.</h1>
                     </div>
                     <div>
-                        <img src={fourOhFour} alt="404 Page Not Found" className="cat" />
+                        <img src={poop} alt="404 Page Not Found" className="cat" />
                     </div>
+                    <p style={{ color: "transparent" }}> oh </p>
                 </div>
             </>
         )

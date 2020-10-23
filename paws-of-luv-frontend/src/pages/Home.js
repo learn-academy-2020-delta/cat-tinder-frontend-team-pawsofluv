@@ -1,20 +1,40 @@
 import React, { Component } from 'react';
-import pawPrint from '../assets/pawPrint.png';
-import catFly from '../assets/catFly.jpg';
+import mittens from '../assets/mittens.jpg';
+import raisins from '../assets/raisins.jpg';
+import toast from '../assets/toast.jpg';
+import itchy from '../assets/itchy.jpg';
+import scratchy from '../assets/scratchy.jpg';
+import bandit from '../assets/bandit.jpg';
 
 class Home extends Component {
     render() {
         return (
             <>
-                <div className="homeBackground">
-                    <div className="titleOne">
-                        <img src={pawPrint} alt="Paws of Luv" className="logoOne" />
-                        <h1>Paws of Luv</h1>
-                        <img src={pawPrint} alt="Paws of Luv" className="logoTwo" />
+                <div id="home-body">
+                    <div>
+                        <img src={mittens} alt="smiley Kitty" className="cat" />
+                        <span className="namez">Mittens</span>
                     </div>
-                    <br />
-                    <img src={catFly} alt="Paws of Luv" className="picOne" />
-                    <p className="kitty">Here are some Kitty's</p>
+                    <div>
+                        <img src={raisins} alt="smiley Kitty" className="cat" />
+                        <span className="namez">Raisins</span>
+                    </div>
+                    <div>
+                        <img src={toast} alt="smiley Kitty" className="cat" />
+                        <span className="namez">Toast</span>
+                    </div>
+                    <div>
+                        <img src={itchy} alt="smiley Kitty" className="cat" />
+                        <span className="namez">Itchy</span>
+                    </div>
+                    <div>
+                        <img src={scratchy} alt="smiley Kitty" className="cat" />
+                        <span className="namez">Scratchy</span>
+                    </div>
+                    <div>
+                        <img src={bandit} alt="smiley Kitty" className="cat" />
+                        <span className="namez">Bandit</span>
+                    </div>
                 </div>
             </>
         )

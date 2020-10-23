@@ -2,37 +2,55 @@ import React, { Component } from 'react';
 
 import LikeButton from '../components/LikeButton.js'
 
+import { NavLink } from 'react-router-dom'
+
 import {
     Button,
     Card,
-    CardTitle,
+    CardBody,
+    CardSubtitle,
     CardText,
-    Col
+    CardTitle,
 } from 'reactstrap'
-import { NavLink } from 'react-router-dom'
+
+import butt from '../assets/butt.png'
+import likeMe from '../assets/likeMe.png'
 
 class CatShow extends Component {
     render() {
         return (
             <>
-                <h3>Cat Show</h3>
-                <Col sm="6">
-                    <Card>
-                        <CardTitle>
-                            {this.props.cat.name}
-                        </CardTitle>
-                        <CardText>
-                            Hello, I am {this.props.cat.age} years old. I love {this.props.cat.enjoys}.
-                    </CardText>
-                        <LikeButton catId={this.props.cat.id} />
-                        <NavLink to={'/catindex'}>
-                            Back to List
-                        </NavLink>
-                        <NavLink to={`/catedit/${this.props.cat.id}`}>
-                            <Button>Edit Cat Profile</Button>
-                        </NavLink>
-                    </Card>
-                </Col>
+                <div id="show-body">
+                    <div id="cat-card">
+                        <Card>
+                            <CardBody>
+                                <CardTitle>
+                                    Well hello there, my name is {this.props.cat.name}!
+                            </CardTitle>
+                                <CardSubtitle>
+                                    I am {this.props.cat.age} years old.
+                            </CardSubtitle>
+                            </CardBody>
+                            <img width="30%" src={butt} alt="Cat" />
+                            <CardBody>
+                                <CardText>
+                                    I really enjoy {this.props.cat.enjoys}.
+                                </CardText>
+                            </CardBody>
+                            <div id="love">
+                                <LikeButton style={{ backgroundImg: "url(../assets/likeMe.png)" }} catId={this.props.cat.id} />
+                            </div>
+                            <NavLink to={'/catindex'}>
+                                <p style={{ color: "black", textShadow: "1px 1px 1px black", margin: "5px" }}>Back to List</p>
+                            </NavLink>
+                            <NavLink to={`/catedit/${this.props.cat.id}`}>
+                                <Button style={{
+                                    width: "200px", backgroundColor: "#D8E2DC", color: "black"
+                                }}>Edit Cat Profile</Button>
+                            </NavLink>
+                        </Card>
+                    </div>
+                </div>
             </>
         )
     }

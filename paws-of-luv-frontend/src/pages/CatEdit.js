@@ -38,48 +38,50 @@ class CatEdit extends Component {
   render() {
     return (
       <>
-        <h3>Cat Edit</h3>
-        <Form>
-          <FormGroup>
-            <Label for="photo">Upload Photo</Label>
-            <Input type="file" name="photo" />
-            <FormText color="muted">
-              Photo of me!
+        <div id="new-body">
+          <h3 className="title">Cat Edit</h3>
+          <Form>
+            <FormGroup>
+              <Label for="photo">Upload Photo</Label>
+              <Input type="file" name="photo" />
+              <FormText color="muted">
+                Photo of me!
             </FormText>
-          </FormGroup>
-          <FormGroup>
-            <Label for="name">Cat's Name</Label>
-            <Input
-              type="text"
-              name="name"
-              onChange={this.handleChange}
-              value={this.state.form.name}
-            />
-          </FormGroup>
-          <FormGroup>
-            <Label for="age">Cat's Age</Label>
-            <Input
-              type="number"
-              name="age"
-              onChange={this.handleChange}
-              value={this.state.form.age}
-            />
-          </FormGroup>
-          <FormGroup>
-            <Label for="enjoys">What does your cat enjoy?</Label>
-            <Input
-              type="text"
-              name="enjoys"
-              onChange={this.handleChange}
-              value={this.state.form.enjoys}
-            />
-          </FormGroup>
+            </FormGroup>
+            <FormGroup>
+              <Label for="name">Cat's Name</Label>
+              <Input
+                type="text"
+                name="name"
+                onChange={this.handleChange}
+                value={this.state.form.name}
+              />
+            </FormGroup>
+            <FormGroup>
+              <Label for="age">Cat's Age</Label>
+              <Input
+                type="number"
+                name="age"
+                onChange={this.handleChange}
+                value={this.state.form.age}
+              />
+            </FormGroup>
+            <FormGroup>
+              <Label for="enjoys">What does your cat enjoy?</Label>
+              <Input
+                type="text"
+                name="enjoys"
+                onChange={this.handleChange}
+                value={this.state.form.enjoys}
+              />
+            </FormGroup>
 
-          <Button name="submit" onClick={this.handleSubmit}>
-            Edit Cat Profile
+            <Button name="submit" onClick={this.handleSubmit}>
+              Edit Cat Profile
               </Button>
-        </Form>
-        { this.state.success && <Redirect to={`/catshow/${this.props.cat.id}`} />}
+          </Form>
+          {this.state.success && <Redirect to={`/catshow/${this.props.cat.id}`} />}
+        </div>
       </>
     )
   }

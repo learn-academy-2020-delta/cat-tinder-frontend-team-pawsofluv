@@ -1,22 +1,35 @@
-/* ########## B O D Y ########## */
-body {
-  background-color: #ede4d9 !important;
-  font-family: "Architects Daughter", cursive !important;
+html {
+  height: 100% !important;
+  width: 100% !important;
 }
 
-/* ########## H E A D E R ########## */
+body {
+  background-color: #d8e2dc !important;
+  font-family: "Sansita Swashed", cursive !important;
+  height: 100% !important;
+  width: 100% !important;
+}
 
-.header {
+#home-body {
   display: flex;
-  position: fixed;
-  flex-direction: row;
-  justify-content: right;
-  text-align: right;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  text-align: center;
+  height: 80vh;
+}
 
-  padding: 10px;
-  background-color: #edd8ec;
-  height: 50px;
+#not-found-body {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
   width: 100%;
+  background-color: #f4acb7;
+  color: black;
+  font-family: "Sansita Swashed", cursive;
 }
 
 .nav {
@@ -26,70 +39,228 @@ body {
   padding: 0px 25px 0px 25px !important;
 }
 
-/* ########## H O M E ########## */
-
-h1 {
-  padding: 0px 15px 0px 15px;
+/* Page Titles */
+.title {
+  font-size: 75px;
+  margin: 10px;
+  padding: 5px;
+  color: #191919;
+  text-shadow: 2px 2px 1px azure;
+  font-family: "Sansita Swashed", cursive;
 }
 
-.titleOne {
+/* Buttons */
+.button {
+  background-color: #f28482 !important;
+  color: #f7ede2;
+  font-weight: bolder;
+  font-family: "Sansita Swashed", cursive !important;
+}
+
+.button:hover {
+  color: #f5cac3 !important;
+}
+
+.show-page-buttons {
+  background-color: #f6bd60 !important;
+  color: #f7ede2;
+  margin: 2px;
+  font-family: "Sansita Swashed", cursive;
+}
+
+.show-page-buttons:hover {
+  color: #f5cac3 !important;
+}
+
+/* Cat Images */
+.cat {
+  height: 600px;
+  width: 600px;
+  border: 10px #ffe5d9;
+  border-style: groove;
+  margin: 10px;
+}
+
+.namez {
+  font-size: 25px;
+  text-shadow: 2px 2px 2px #191919;
+}
+
+/* Header */
+.jumbotron.jumbotron-fluid {
+  background-color: #f4acb7;
+  color: azure;
+  text-shadow: 3px 3px 2px black;
+  padding: 3rem;
+  font-family: "Sansita Swashed", cursive;
+}
+
+.display-3 {
+  font-size: 150px !important;
+}
+
+.goodStretch {
   display: flex;
   justify-content: center;
 }
 
-.logoOne {
+.lead {
+  font-size: 30px !important;
+}
+
+.leftCat {
   display: flex !important;
   justify-content: left !important;
-  height: 40px;
-  width: 40px;
+  height: 220px;
+  width: 225px;
 }
 
-.logoTwo {
+.rightCat {
   display: flex !important;
-  justify-content: right !important;
-  height: 40px;
-  width: 40px;
+  justify-content: left !important;
+  height: 220px;
+  width: 225px;
 }
 
-.homeBackground {
-  display: flex;
-  flex-direction: column;
-  /* flex-wrap: wrap; */
-  justify-content: center;
+/* Hamburger Menu */
+nav.navbar.navbar-light {
+  text-align: right;
+  font-size: 30px;
+}
+
+.butts {
+  background-image: url("./assets/poop.png") !important;
+}
+
+.mr-auto {
+  background-image: url("./assets/poop.png") !important;
+}
+
+.mr-2 {
+  background-image: url("./assets/poop.png") !important;
+}
+.navbar-light .navbar-toggler {
+  border: 1.5px solid #f7ede2 !important;
+}
+
+button.mr-2.navbar-toggler:hover {
+  text-align: right;
+  color: #f5cac3 !important;
+}
+
+.navbar-nav .nav-link {
+  color: #f7ede2 !important;
+}
+
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #f5cac3 !important;
+}
+
+/* Links */
+a:hover {
+  color: #f5cac3 !important;
+}
+
+a:visited {
+  color: #f7ede2;
+}
+
+/* Index Page */
+
+a.btn.btn-secondary {
+  background-image: url("./assets/sleepy.png");
+  background-size: cover;
+  font-weight: bolder;
+  font-size: 20px;
+  margin: 10px;
+  padding: 15px;
+  margin-bottom: 10rem;
+  width: 300px;
+  height: 295px;
+  font-family: "Sansita Swashed", cursive;
+  color: #f4acb7;
+  text-shadow: 2px 2px 1px black;
+}
+
+#index-body {
+  background-color: #f7ede2;
   text-align: center;
-  padding: 100px;
 }
 
-.picOne {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  height: 425px;
-  width: 385px;
-}
-
-/* ########## C A T - I N D E X ########## */
-
-/* ########## C A T - S H O W ########## */
-
-/* ########## C A T - N E W ########## */
-
-/* ########## C A T - E D I T ########## */
-
-/* ########## N O T - F O U N D ########## */
-
-.pageNotFound {
+#button-set {
   display: flex;
-  justify-content: center !important;
+  justify-content: space-around;
 }
 
-/* ########## F O O T E R ########## */
+/* Show Page */
+#show-body {
+  background-color: black;
+}
 
-.footer {
-  background-color: #edd8ec;
-  position: fixed;
-  bottom: 0;
-  height: 50px;
-  width: 100%;
+#cat-card {
+  padding: 35px;
+  background-color: black;
+  width: 70vw;
+  height: 80vh;
+  margin: 0 auto;
+  font-size: 25px;
+}
+
+div.card {
+  text-align: center;
+  align-items: center;
+  background-color: #ffe5d9;
+  font-family: "Grandstander", cursive;
+}
+
+/* New Page */
+#new-body {
+  background-color: #ffe5d9;
+  height: 100vh;
+  text-align: center;
+  font-family: "Sansita Swashed", cursive;
+}
+
+.form-input {
+  width: 50% !important;
+  margin: 0 auto;
+}
+
+.fillMeOut {
+}
+
+#love {
+  background-image: url("./assets/likeMe.png");
+  background-size: cover;
+}
+
+/* Phone Breakpoint */
+@media (max-width: 480px) {
+  .cat {
+    margin: 10px;
+    max-width: 90%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  #index-body {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  #cat-card {
+    width: 90vw;
+    height: 90vh;
+    margin: 0 auto;
+  }
+
+  a.btn.btn-secondary {
+    background-color: #f28482;
+    font-weight: bold;
+    margin: 10px;
+    padding: 30px;
+  }
 }
