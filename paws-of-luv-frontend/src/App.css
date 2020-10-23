@@ -175,7 +175,7 @@ a:visited {
 
 /* ########## C A T - I N D E X ########## */
 
-a.btn.btn-secondary {
+.btn.btn-secondary {
   background-image: url("./assets/sleepy.png");
   background-size: cover;
   font-weight: bolder;

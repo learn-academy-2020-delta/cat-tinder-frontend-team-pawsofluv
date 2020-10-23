@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import {
-    Button
+    Button,
+    Col,
+    Container,
+    Row
 } from 'reactstrap'
 
-// import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 class CatIndex extends Component {
     render() {
@@ -13,20 +16,29 @@ class CatIndex extends Component {
                     <h3 className="title">Here's All Our Furry Friends!</h3>
                     <br />
                     <div id="button-set">
+                      <Container fluid>
+                        <Row>
                         {this.props.cats && this.props.cats.map((cat, index) => {
                             return (
-                                <Button key={index} href={`/catshow/${cat.id}`}>
-                                    <br />
-                                    My
-                                    <br />
-                                    name
-                                    <br />
-                                    is
-                                    <br />
-                                    {cat.name}.
-                                </Button>
+                                  <Col>
+                                    <Link to={`/catshow/${cat.id}`} key={index} >
+
+                                    <Button>
+                                      <br />
+                                      My
+                                      <br />
+                                      name
+                                      <br />
+                                      is
+                                      <br />
+                                      {cat.name}.
+                                    </Button>
+                                    </Link>
+                                  </Col>
                             )
                         })}
+                        </Row>
+                      </Container>
                     </div>
                 </div>
             </>
