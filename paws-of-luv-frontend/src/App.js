@@ -8,7 +8,7 @@ import {
   Switch
 } from 'react-router-dom'
 
-import mockCats from './mockCats.js'
+// import mockCats from './mockCats.js'
 
 import Header from './components/Header'
 import Footer from './components/Footer'
@@ -25,17 +25,53 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      cats: mockCats
+      cats: ""
     }
   }
 
   createNewCat = (newCat) => {
-    console.log(newCat)
+    fetch("http://localhost:3000/cats", {
+      body: JSON.stringify(newCat),
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method: "POST"
+    })
+    // console.log(newCat)
+    .then(response => {
+      console.log(response)
+      return response.json()
+    })
+    .then(payload => {
+      this.catIndex()
+    })
+    .catch(errors => {
+      console.log("create errors:", errors)
+    })
   }
 
   editCat = (cat, id) => {
     console.log("Edit cat:", cat)
     console.log("ID:", id)
+  }
+
+  componentDidMount(){
+    this.catIndex()
+  }
+
+  catIndex = () => {
+    fetch("http://localhost:3000/cats") //must follow rails restful route
+    .then(response => {
+      console.log(response)
+      return response.json()
+    })
+    .then(catsArray => {
+      console.log(catsArray)
+      this.setState({ cats: catsArray }) //getting cats from backend DB
+    })
+    .catch(errors => {
+      console.log("index errors:", errors)
+    })
   }
 
   render() {
@@ -59,10 +95,12 @@ class App extends Component {
                   path="/catshow/:id"
                   render={(props) => {
                     let id = props.match.params.id
-                    let cat = this.state.cats.find(cat => cat.id === parseInt(id))
-                    return (
-                      <CatShow cat={cat} />
-                    )
+                    if (this.state.cats){
+                      let cat = this.state.cats.find(cat => cat.id === parseInt(id))
+                      return (
+                        <CatShow cat={cat} />
+                      )
+                    }
                   }}
                 />
                 <Route
